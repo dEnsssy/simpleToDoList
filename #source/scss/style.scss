@@ -1,0 +1,129 @@
+// Reset Styles
+@import "nullstyle.scss";
+
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+body {
+    font-family: "Fredoka", sans-serif;
+    background: #4544cc;
+}
+.container {
+    max-width: 45vw;
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 100px;
+    & h2 {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 60px;
+        color: white;
+        text-shadow: 3px 3px #1089da;
+    }
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    & button {
+        background: #7990e3;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+    & button:active {
+        background: #485eae;
+    }
+    &__btnFilters {
+        text-align: center;
+    }
+
+    // Стили для задач
+    &__list {
+        padding: 10px 10px 0px 10px;
+    }
+    &__task {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__task button {
+        margin-right: 10px;
+        width: 100px;
+        height: 30px;
+    }
+    & h3 {
+        font-size: 40px;
+        color: antiquewhite;
+        overflow-wrap: anywhere;
+    }
+    & p {
+        margin-left: 10px;
+        font-size: 18px;
+        color: antiquewhite;
+        opacity: 0.7;
+        overflow-wrap: anywhere;
+    }
+}
+
+.activeBtn {
+    background: wheat !important;
+}
+.taskDone {
+    opacity: 0.2;
+}
+.dispNone {
+    display: none;
+}
+
+section > div {
+    border: 3px solid #474747;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#inputTitle {
+    width: 30vw;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#inputDesc {
+    width: 30vw;
+    height: 15vh;
+    margin-bottom: 10px;
+}
+input,
+textarea {
+    display: block;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none; //Чтобы нельзя было растягитвать
+}
+@media (max-width: 768px) {
+    .content {
+        & h3 {
+            font-size: 20px;
+            color: antiquewhite;
+            overflow-wrap: anywhere;
+        }
+        & p {
+            margin-left: 10px;
+            font-size: 8px;
+            color: antiquewhite;
+            opacity: 0.7;
+            overflow-wrap: anywhere;
+        }
+        & button {
+            font-size: 15px;
+        }
+        &__task button {
+            font-size: 8px;
+            margin-right: 3px;
+            width: 33px;
+            height: 20px;
+        }
+    }
+}
